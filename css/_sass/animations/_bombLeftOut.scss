@@ -1,0 +1,21 @@
+@keyframes bombLeftOut {
+    0% {
+        opacity: 1;
+        transform-origin: 50% 50%;
+        transform: rotate(0deg);
+    }
+    50% {
+        opacity: 1;
+        transform-origin: -100% 50%;
+        transform: rotate(-160deg);
+    }
+    100% {
+        opacity: 0;
+        transform-origin: -100% 50%;
+        transform: rotate(-160deg);
+    }
+}
+
+.bombLeftOut {
+    animation-name: bombLeftOut;
+}

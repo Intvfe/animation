@@ -1,0 +1,20 @@
+
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Rancho|Ubuntu"/>
+<h1><span class="first">I</span><span>n</span><span>t</span><span>v</span><span class="first">A</span><span>n</span><span>i</span><span>m</span><span>a</span><span>t</span><span>i</span><span>o</span><span>n</span><span class="first">D</span><span>e</span><span>m</span><span>o</span>
+</h1>
+<div class="wrap">
+  <div class="item">
+    <dl v-repeat="animationList.anicollection">
+      <dt v-text="$key"></dt>
+      <dd><b v-repeat="$value" v-on="click:showPop($value)"><em v-on="mouseover: doAnimation($value,$event)"></em><i v-text="$value"></i></b><b v-repeat="4 - $value.length % 4"></b></dd>
+    </dl>
+  </div>
+  <div class="item">
+    <dl v-repeat="animationList.magic">
+      <dt v-text="$key"></dt>
+      <dd><b v-repeat="$value" v-on="click:showPop($value)"><em v-on="mouseover: doAnimation($value,$event)"></em><i v-text="$value"></i></b><b v-repeat="4 - $value.length % 4"></b></dd>
+    </dl>
+  </div>
+</div>
+<div class="tip">⇘鼠标移上预览动画<br>⇘点击复制到剪切版</div>
+<footer>Intv frontend team</footer>

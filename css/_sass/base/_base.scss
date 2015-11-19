@@ -1,0 +1,34 @@
+a:active{
+    transition: transform .3s;
+    transform: scale(.9);
+}
+
+html,body,#viewport{
+    height: 100%;
+    min-height: rem(528);
+}
+#viewport>div{
+    min-height: 100%;
+}
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.animated.infinite {
+  animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+  animation-duration: 2s;
+}
+.v-enter{
+    transition: .5s all;
+    transform: translate(0,-1000px)
+}
+.v-leave{
+    transition: .5s all;
+    transform: translate(0,1000px)
+}
+
+

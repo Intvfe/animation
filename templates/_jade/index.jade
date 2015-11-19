@@ -1,0 +1,36 @@
+link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Rancho|Ubuntu")
+h1
+    each val , index in 'Intv'.split('')
+        if !index
+            span.first=val
+        else
+            span=val
+    each val , index in 'Animation'.split('')
+        if !index
+            span.first=val
+        else
+            span=val
+    each val , index in 'Demo'.split('')
+        if !index
+            span.first=val
+        else
+            span=val
+.wrap
+    .item
+        dl(v-repeat="animationList.anicollection")
+            dt(v-text="$key")
+            dd
+                b(v-repeat="$value" v-on="click:showPop($value)")
+                    em(v-on="mouseover: doAnimation($value,$event)")
+                    i(v-text="$value")
+                b(v-repeat="4 - $value.length % 4")
+    .item
+        dl(v-repeat="animationList.magic")
+            dt(v-text="$key")
+            dd
+                b(v-repeat="$value" v-on="click:showPop($value)")
+                    em(v-on="mouseover: doAnimation($value,$event)")
+                    i(v-text="$value")
+                b(v-repeat="4 - $value.length % 4")
+.tip ⇘鼠标移上预览动画<br>⇘点击复制到剪切版
+footer Intv frontend team

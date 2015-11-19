@@ -1,0 +1,25 @@
+/*
+  SASS variables are information about icon's compiled state, stored under its original file name
+
+  .icon-home
+    width: $icon-home-width
+
+  The large array-like variables contain all information about a single icon
+  $icon-home: x y offset_x offset_y width height total_width total_height image_path
+
+  At the bottom of this section, we provide information about the spritesheet itself
+  $spritesheet: width height image $spritesheet-sprites
+  */
+[class^='i-']
+    display: inline-block
+    vertical-align: middle
+    background:
+        image: u('sprite.png')
+        size: r(28) r(40)
+.i-address
+    width: r(28)
+    height: r(40)
+    background:
+        position: r(0) r(0)
+
+

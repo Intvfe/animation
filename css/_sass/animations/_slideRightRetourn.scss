@@ -1,0 +1,14 @@
+@keyframes slideRightRetourn {
+    0% {
+        transform-origin: 0 0;
+        transform: translateX(100%);
+    }
+    100% {
+        transform-origin: 0 0;
+        transform: translateX(0%);
+    }
+}
+
+.slideRightRetourn {
+    animation-name: slideRightRetourn;
+}

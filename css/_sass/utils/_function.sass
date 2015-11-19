@@ -1,0 +1,11 @@
+@function rem($size)
+    @return 0rem + $size / 16
+
+@function r($size)
+    @return 0rem + $size / 32
+
+@function u($img, $path:'')
+    @if $path != ''
+        @return url(#{$path}/#{$img}?v=#{$CVS})
+    @else
+        @return url(#{$IMGURL}/#{$img}?v=#{$CVS})

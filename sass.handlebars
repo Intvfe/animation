@@ -1,0 +1,25 @@
+{
+  // Default options
+  'functions': false,
+}
+
+{{#extend "sass"}}
+{{#content "sprites"}}
+[class^='i-']
+    display: inline-block
+    vertical-align: middle
+    background:
+        image: u('{{{spritesheet.escaped_image}}}')
+        size: r({{spritesheet.width}}) r({{spritesheet.height}})
+{{/content}}
+{{#content "spritesheet"}}
+{{#each sprites}}
+.i-{{strings.name}}
+    width: r({{width}})
+    height: r({{height}})
+    background:
+        position: r({{offset_x}}) r({{offset_y}})
+{{/each}}
+{{/content}}
+
+{{/extend}}
